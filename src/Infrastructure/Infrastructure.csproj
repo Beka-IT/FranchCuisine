@@ -18,4 +18,9 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Core\Application\Application.csproj" />
+      <ProjectReference Include="..\Core\Domain\Domain.csproj" />
+    </ItemGroup>
+
 </Project>

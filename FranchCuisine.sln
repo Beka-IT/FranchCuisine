@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.UnitTests", "te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.IntegrationTests", "tests\Application.IntegrationTests\Application.IntegrationTests.csproj", "{C2050884-8E95-472B-939C-1DF34C131C2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "src\WebUI\WebUI.csproj", "{539CABC6-6878-43C3-BBB9-91A51D1EC08A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{C2050884-8E95-472B-939C-1DF34C131C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2050884-8E95-472B-939C-1DF34C131C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2050884-8E95-472B-939C-1DF34C131C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539CABC6-6878-43C3-BBB9-91A51D1EC08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539CABC6-6878-43C3-BBB9-91A51D1EC08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539CABC6-6878-43C3-BBB9-91A51D1EC08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539CABC6-6878-43C3-BBB9-91A51D1EC08A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

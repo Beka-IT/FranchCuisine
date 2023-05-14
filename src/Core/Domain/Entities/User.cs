@@ -9,4 +9,5 @@ public class User : BaseEntity
     public string Password { get; set; }
     public UserType Type { get; set; }
     public int BranchId { get; set; }
+    public Branch Branch { get; set; }
 }
