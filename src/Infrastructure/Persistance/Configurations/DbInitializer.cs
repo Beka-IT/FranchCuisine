@@ -1,12 +1,13 @@
 using Domain.Entities;
 using Infrastructure.Persistance.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistance.Configurations;
 
 public class DbInitializer
 {
-    public static void Initialize(AppDbContext context)
+    public static async Task InitializeAsync(AppDbContext context)
     {
-        context.Database.EnsureCreated();
+        await context.Database.MigrateAsync();
     }
 }

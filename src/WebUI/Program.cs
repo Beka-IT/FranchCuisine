@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
         try
         {
             var context = serviceProvider.GetRequiredService<AppDbContext>();
-            DbInitializer.Initialize(context);
+            await DbInitializer.InitializeAsync(context);
         }
         catch (Exception exception)
         {
