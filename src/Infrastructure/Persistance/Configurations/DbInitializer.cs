@@ -1,3 +1,4 @@
+using Domain.Entities;
 using Infrastructure.Persistance.Data;
 
 namespace Infrastructure.Persistance.Configurations;

@@ -221,3 +221,5 @@ FakesAssemblies/
 
 # Paket dependency manager
 .paket/paket.exe
+/src/WebUI/appsettings.json
+/src/WebUI/appsettings.json

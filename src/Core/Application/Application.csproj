@@ -7,6 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Reference Include="Microsoft.EntityFrameworkCore">
         <HintPath>..\..\..\..\..\.nuget\packages\microsoft.entityframeworkcore\6.0.0\lib\net6.0\Microsoft.EntityFrameworkCore.dll</HintPath>
       </Reference>
