@@ -22,9 +22,9 @@ public class AuthController : ControllerBase
 
     [HttpPost]
     [AllowAnonymous]
-    public async Task<IActionResult> SignIn(User user)
+    public async Task<IActionResult> SignIn(string login, string password)
     {
-        var token = await _authService.SignInAsync(user);
+        var token = await _authService.SignInAsync(login, password);
         if (token is null)
         {
             return Unauthorized();

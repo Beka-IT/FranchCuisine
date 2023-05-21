@@ -22,11 +22,11 @@ public class JwtAuthService
         _configuration = configuration;
     }
 
-    public async Task<string> SignInAsync(User user)
+    public async Task<string> SignInAsync(string login, string password)
     {
-        var realUser = await _db.Users.FirstOrDefaultAsync(x => x.Login == user.Login);
+        var realUser = await _db.Users.FirstOrDefaultAsync(x => x.Login == login);
         
-        if (realUser is not null && BCrypt.Net.BCrypt.Verify(user.Password, realUser.Password))
+        if (realUser is not null && BCrypt.Net.BCrypt.Verify(password, realUser.Password))
         {
             var issuer = _configuration.GetSection("Jwt:Issuer").ToString();
             var audience = _configuration.GetSection("Jwt:Audience").ToString();
@@ -37,7 +37,7 @@ public class JwtAuthService
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("Id", Guid.NewGuid().ToString()),
-                    new Claim(JwtRegisteredClaimNames.Sub, user.Login)
+                    new Claim(JwtRegisteredClaimNames.Sub, login)
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(5),
                 Issuer = issuer,
